@@ -1,0 +1,84 @@
+body {
+    padding-top: 10px;
+    padding-left: 20px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-image: url(./main\ game\ background.png);
+    background-position: top;
+    background-size: cover;
+}
+.top{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#title{
+    font-size: 32px;
+    color: blueviolet;
+}
+#description {
+    font-size: 20px;
+    color: coral;
+}
+.middle {
+    display: flex;
+    flex-direction: column;
+}
+.middle-top {
+    display: flex;
+}
+#The_Hangman {
+    width: 50%;
+    height: 400px;
+    border: red solid 3px;
+}
+#letters {
+    display: grid;
+    grid-template-columns: repeat(5,75px);
+    justify-content: center;
+    align-items: center;
+    gap: 10px;
+    width: 50%;
+    height: 400px;
+    border: red solid 3px;
+    font-size: 32px;
+}
+.character {
+    border-radius: 50%;
+    background-color: rosybrown;
+    text-align: center;
+}
+.character:hover {
+    background-color: turquoise;
+}
+
+.middle-bottom {
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    height: 75px;
+    border: red solid 3px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-size: x-large;
+}
+.bottom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+#reset {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 100px;
+    height: 50px;
+    background-color: cadetblue;
+    border-radius: 30%;
+    font: 28px  bold;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    color: chartreuse;
+}
+#reset:hover {
+    background-color: blueviolet;
+}
