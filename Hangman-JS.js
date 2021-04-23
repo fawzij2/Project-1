@@ -3,6 +3,7 @@ const answerArea = document.querySelector(".middle-bottom")
 let rightWord = []
 let correct = 0
 let wrong = 0
+const hangman = ["head", "body", "left_arm", "right_arm", "left_leg", "right_leg"]
 const answer = () => {
     rightWord = words[0].split("")
     for (let i=0 ; i < rightWord.length ; i++) {
@@ -24,24 +25,34 @@ const answerCheck = (theAnswer) => {
     if (rightWord.includes(answer1)){
         theAnswer.style.visibility = "hidden"
         let correctLetter = document.getElementsByClassName(answer1)
-        // console.log(correctLetter)
         for (let i = 0 ; i < correctLetter.length ; i++){
         correctLetter[i].style.visibility = "visible"
         }
         correct += correctLetter.length
         if (correct === rightWord.length){
-            alert("You Win. \n The man is grateful to you")
+            alert(`You Win. \n The man is grateful to you`)
             location.reload()
         }
     } else {
         theAnswer.style.visibility = "hidden"
         wrong ++
         if (wrong === 6) {
-            alert("You lose \n The man is dead")
-            location.reload()
+            let bodyPart = document.getElementById(hangman[wrong-1])
+            bodyPart.style.visibility = "visible"
+        } if (wrong === 1) {
+            let bodyPart = document.getElementById(hangman[wrong-1])
+            bodyPart.style.visibility = "visible"
+        } else {
+            let bodyPart = document.getElementById(hangman[wrong-1])
+            bodyPart.style.visibility = "visible"
         }
     }
-    
+    if (wrong === 6) {
+        setTimeout(() => {
+            alert(`You lose \n The man is dead`)
+                location.reload()
+        }, 100) 
+            }
 }
 const a = document.querySelector(`#a`)
 a.onclick = () =>{answerCheck(a)}

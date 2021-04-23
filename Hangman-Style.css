@@ -30,7 +30,6 @@ body {
 #The_Hangman {
     width: 50%;
     height: 400px;
-    border: red solid 3px;
 }
 #hanger {
     position: relative;
@@ -46,6 +45,7 @@ body {
     height: 50px;
     border-radius: 100%;
     border: black solid 2px;
+    visibility : hidden;
 }
 #body{
     position: relative;
@@ -54,6 +54,7 @@ body {
     width: 2px;
     height: 75px;
     background-color: black;
+    visibility : hidden;
 }
 #left_arm{
     position: relative;
@@ -63,6 +64,7 @@ body {
     width: 2px;
     height: 50px;
     background-color: black;
+    visibility : hidden;
 }
 #right_arm{
     position: relative;
@@ -72,6 +74,7 @@ body {
     width: 2px;
     height: 50px;
     background-color: black;
+    visibility : hidden;
 }
 #left_leg{
     position: relative;
@@ -81,6 +84,7 @@ body {
     width: 2px;
     height: 50px;
     background-color: black;
+    visibility : hidden;
 }
 #right_leg{
     position: relative;
@@ -90,6 +94,7 @@ body {
     width: 2px;
     height: 50px;
     background-color: black;
+    visibility : hidden;
 }
 #letters {
     display: grid;
@@ -99,7 +104,6 @@ body {
     gap: 10px;
     width: 50%;
     height: 400px;
-    border: red solid 3px;
     font-size: 32px;
 }
 .character {
@@ -121,7 +125,6 @@ body {
     justify-content: space-evenly;
     align-items: center;
     height: 75px;
-    border: red solid 3px;
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     font-size: x-large;
 }
