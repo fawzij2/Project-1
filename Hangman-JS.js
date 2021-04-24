@@ -5,13 +5,16 @@ let correct = 0
 let wrong = 0
 const hangman = ["head", "body", "left_arm", "right_arm", "left_leg", "right_leg"]
 const answer = () => {
-    rightWord = words[Math.floor(Mathr.random() * 10)].split("")
+    rightWord = words[Math.floor(Math.random() * 10)].split("")
     for (let i=0 ; i < rightWord.length ; i++) {
         let element = document.createElement("div")
         element.innerText = rightWord[i]
         element.className = rightWord[i]
         answerArea.append(element)
-        element.style.visibility =`hidden`
+        element.style.width = "20px"
+        element.style.borderBottom = "2px solid brown"
+        element.style.textAlign = "center"
+        element.style.fontSize = "0"
     }
 }
 document.addEventListener("DOMContentLoaded", () => {
@@ -21,19 +24,25 @@ document.addEventListener("DOMContentLoaded", () => {
 const answerCheck = (theAnswer) => {
     console.log(theAnswer)
     const answer1 = theAnswer.innerText
-    console.log(answer1)
+    // console.log(answer1)
     if (rightWord.includes(answer1)){
+        document.getElementById("correct").play()
         theAnswer.style.visibility = "hidden"
         let correctLetter = document.getElementsByClassName(answer1)
         for (let i = 0 ; i < correctLetter.length ; i++){
-        correctLetter[i].style.visibility = "visible"
+        correctLetter[i].style.fontSize = "20px"
         }
         correct += correctLetter.length
         if (correct === rightWord.length){
-            alert(`You Win. \n The man is grateful to you`)
+            document.getElementById("win").play()
+            setTimeout(() => {
+                alert(`You Win. \n The man is grateful to you`)
             location.reload()
+            },100)
+            
         }
     } else {
+        document.getElementById('wrong').play()
         theAnswer.style.visibility = "hidden"
         wrong ++
         if (wrong === 6) {
@@ -48,6 +57,7 @@ const answerCheck = (theAnswer) => {
         }
     }
     if (wrong === 6) {
+        document.getElementById("lose").play()
         setTimeout(() => {
             alert(`You lose \n The man is dead`)
                 location.reload()

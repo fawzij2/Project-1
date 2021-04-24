@@ -1,8 +1,12 @@
+*{
+    box-sizing: border-box;
+}
 body {
     padding-top: 10px;
-    padding-left: 20px;
+    /* padding-left: 20px; */
     font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
     background-image: url(./main\ game\ background.png);
+    background-repeat: no-repeat;
     background-position: top;
     background-size: cover;
 }
@@ -23,12 +27,13 @@ body {
 .middle {
     display: flex;
     flex-direction: column;
-}
+} 
 .middle-top {
-    display: flex;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
 }
 #The_Hangman {
-    width: 50%;
+    /* width: 50%; */
     height: 400px;
 }
 #hanger {
@@ -102,7 +107,7 @@ body {
     justify-content: center;
     align-items: center;
     gap: 10px;
-    width: 50%;
+    /* width: 50%; */
     height: 400px;
     font-size: 32px;
 }
@@ -149,4 +154,15 @@ body {
 #reset:hover {
     background-color: blueviolet;
     cursor: pointer;
+}
+
+@media (orientation: portrait) and (max-width: 500px) {
+    .middle-top{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #letters {
+        display: grid;
+        grid-template-columns: repeat(4,75px);
+    }
 }
