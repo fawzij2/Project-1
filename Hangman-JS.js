@@ -1,11 +1,11 @@
-const words = [`project`]
+const words = [`project`, `meeting`, `ragnarok`, `museum`, `hercules`, `amusement`, `broasted`, `endgame`, `titans`, `sodium`]
 const answerArea = document.querySelector(".middle-bottom")
 let rightWord = []
 let correct = 0
 let wrong = 0
 const hangman = ["head", "body", "left_arm", "right_arm", "left_leg", "right_leg"]
 const answer = () => {
-    rightWord = words[0].split("")
+    rightWord = words[Math.floor(Mathr.random() * 10)].split("")
     for (let i=0 ; i < rightWord.length ; i++) {
         let element = document.createElement("div")
         element.innerText = rightWord[i]
