@@ -1,0 +1,94 @@
+body{
+    background-image: url(./start\ page\ background.jpg);
+    background-repeat: no-repeat;
+    background-position: 300px 100px;
+    background-size:auto;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+#start{
+    position: absolute;
+    top: 100px;
+    left: 650px;
+    background-color: indianred;
+    width: 120px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 15%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+
+#start:hover{
+    background-color: lawngreen;
+    cursor: pointer;
+}
+
+#words_list{
+    position: absolute;
+    top: 195px;
+    left: 637px;
+    background-color: indianred;
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 15%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+#words_list:hover {
+    background-color: lawngreen;
+    cursor: pointer;
+}
+
+#add_word{
+    position: absolute;
+    top: 295px;
+    left: 639px;
+    background-color: indianred;
+    width: 150px;
+    height: 50px;
+    padding-top: 10px;
+    border-radius: 15%;
+    font-size: 30px;
+    font-weight: bold;
+    text-align: center;
+}
+#add_word:hover {
+    background-color: lawngreen;
+    cursor: pointer;
+}
+
+#words{
+    position: absolute;
+    top: 130px;
+    left: 385px;
+    display: grid;
+    grid-template-columns: repeat(4,50px);
+    justify-content: space-around;
+    align-items: center;
+    width: 650px;
+    height: 350px;
+    border: black solid 3px;
+    background-color: blue;
+    text-align: center;
+    font-size: 22px;
+    font-weight: bold;
+    visibility: hidden;
+}
+#close_window{
+    position: absolute;
+    left: 610px;
+    top: -3px;
+}
+#close_window:hover{
+    cursor: pointer;
+}
+
+#edition {
+    position: absolute;
+    top: 450px;
+    left: 950px;
+    font-size: 25px;
+}
