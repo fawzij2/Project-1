@@ -208,14 +208,14 @@ body {
     }
     #hanger{
         position: relative;
-        left: 100px;
+        left: 30px;
         width: 150px;
         height: 400px;
     }
     #head{
         position: relative;
         bottom: 290px;
-        left: 191px;
+        left: 121px;
         width: 50px;
         height: 50px;
         border-radius: 100%;
@@ -225,7 +225,7 @@ body {
     #body{
         position: relative;
         bottom: 290px;
-        left: 217px;
+        left: 147px;
         width: 2px;
         height: 75px;
         background-color: black;
@@ -234,7 +234,7 @@ body {
     #left_arm{
         position: relative;
         bottom: 355px;
-        left: 199px;
+        left: 129px;
         transform: rotate(45deg);
         width: 2px;
         height: 50px;
@@ -244,7 +244,7 @@ body {
     #right_arm{
         position: relative;
         bottom: 405px;
-        left: 235px;
+        left: 165px;
         transform: rotate(-45deg);
         width: 2px;
         height: 50px;
@@ -254,7 +254,7 @@ body {
     #left_leg{
         position: relative;
         bottom: 394px;
-        left: 205px;
+        left: 135px;
         transform: rotate(30deg);
         width: 2px;
         height: 50px;
@@ -264,7 +264,7 @@ body {
     #right_leg{
         position: relative;
         bottom: 444px;
-        left: 229px;
+        left: 159px;
         transform: rotate(-30deg);
         width: 2px;
         height: 50px;
@@ -274,6 +274,19 @@ body {
     #letters {
         display: grid;
         grid-template-columns: repeat(4,75px);
+        justify-content: center;
+        align-items: center;
+    }
+    #char_img{
+        position: absolute;
+        top: 175px;
+        left: 250px;
+        height: 150px;
+        width: 150px;
+        border:black solid 2px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
     }
 }
 
@@ -284,14 +297,14 @@ body {
     }
     #hanger{
         position: relative;
-        left: 160px;
+        left: 30px;
         width: 150px;
         height: 400px;
     }
     #head{
         position: relative;
         bottom: 290px;
-        left: 251px;
+        left: 121px;
         width: 50px;
         height: 50px;
         border-radius: 100%;
@@ -301,7 +314,7 @@ body {
     #body{
         position: relative;
         bottom: 290px;
-        left: 277px;
+        left: 147px;
         width: 2px;
         height: 75px;
         background-color: black;
@@ -310,7 +323,7 @@ body {
     #left_arm{
         position: relative;
         bottom: 355px;
-        left: 259px;
+        left: 129px;
         transform: rotate(45deg);
         width: 2px;
         height: 50px;
@@ -320,7 +333,7 @@ body {
     #right_arm{
         position: relative;
         bottom: 405px;
-        left: 295px;
+        left: 165px;
         transform: rotate(-45deg);
         width: 2px;
         height: 50px;
@@ -330,7 +343,7 @@ body {
     #left_leg{
         position: relative;
         bottom: 394px;
-        left: 265px;
+        left: 135px;
         transform: rotate(30deg);
         width: 2px;
         height: 50px;
@@ -340,14 +353,124 @@ body {
     #right_leg{
         position: relative;
         bottom: 444px;
-        left: 289px;
+        left: 159px;
         transform: rotate(-30deg);
         width: 2px;
         height: 50px;
         background-color: black;
         visibility : hidden;
     }
+    #letters {
+        display: grid;
+        grid-template-columns: repeat(4,75px);
+        justify-content: center;
+        align-items: center;
+    }
+    #char_img{
+        position: absolute;
+        top: 175px;
+        left: 250px;
+        height: 150px;
+        width: 150px;
+        border:black solid 2px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
 }
+
+@media (orientation: portrait) and (min-width:700px){
+    body {
+        height: 100vh;
+    }
+    .middle-top{
+        display: grid;
+        grid-template-columns: 1fr;
+    }
+    #hanger{
+        position: relative;
+        left: 280px;
+        width: 150px;
+        height: 400px;
+    }
+    #head{
+        position: relative;
+        bottom: 290px;
+        left: 374px;
+        width: 50px;
+        height: 50px;
+        border-radius: 100%;
+        border: black solid 2px;
+        visibility : hidden;
+    }
+    #body{
+        position: relative;
+        bottom: 290px;
+        left: 397px;
+        width: 2px;
+        height: 75px;
+        background-color: black;
+        visibility : hidden;
+    }
+    #left_arm{
+        position: relative;
+        bottom: 355px;
+        left: 379px;
+        transform: rotate(45deg);
+        width: 2px;
+        height: 50px;
+        background-color: black;
+        visibility : hidden;
+    }
+    #right_arm{
+        position: relative;
+        bottom: 405px;
+        left: 415px;
+        transform: rotate(-45deg);
+        width: 2px;
+        height: 50px;
+        background-color: black;
+        visibility : hidden;
+    }
+    #left_leg{
+        position: relative;
+        bottom: 394px;
+        left: 384px;
+        transform: rotate(30deg);
+        width: 2px;
+        height: 50px;
+        background-color: black;
+        visibility : hidden;
+    }
+    #right_leg{
+        position: relative;
+        bottom: 444px;
+        left: 410px;
+        transform: rotate(-30deg);
+        width: 2px;
+        height: 50px;
+        background-color: black;
+        visibility : hidden;
+    }
+    #letters {
+        display: grid;
+        grid-template-columns: repeat(7,75px);
+        justify-content: center;
+        align-items: center;
+    }
+    #char_img{
+        position: absolute;
+        top: 175px;
+        left: 550px;
+        height: 150px;
+        width: 150px;
+        border:black solid 2px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
+    }
+}
+
 @media (orientation: landscape) and (max-width:900px) {
     .middle-top{
         display: grid;
@@ -417,5 +540,22 @@ body {
         height: 50px;
         background-color: black;
         visibility : hidden;
+    }
+}
+
+@media (orientation: landscape) and (min-width: 1000px) and (max-width:1100px) {
+    body {
+        height: 100vh;
+    }
+    #char_img{
+        position: absolute;
+        top: 175px;
+        left: 380px;
+        height: 150px;
+        width: 150px;
+        border:black solid 2px;
+        background-repeat: no-repeat;
+        background-position: top;
+        background-size: cover;
     }
 }
